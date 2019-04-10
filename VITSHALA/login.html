@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> Login- VITShala </title>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  
+	<style>
+
+	#LeftBox{
+		background: white;
+		background-image: url("ABC.jpg");
+		width: 700px;
+		height: 655px;
+		background-repeat: no-repeat;
+    	background-size: 100%;
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	opacity: 1.0;
+	}
+
+
+	#LeftHeading1{
+		font-family: Raleway;
+		color: white;
+		font:bold;
+		position: absolute;
+		opacity: 1.0;
+		padding-left: 180px;
+		padding-top: 150px;
+		font-size: 60px;
+	}
+
+
+	#LeftHeading2{
+		font-family: Raleway,sans-serif; 
+		font-style: normal; 
+		font-variant: normal; 
+		font-weight: 700; 
+
+		color: white;
+		opacity: 1.0;
+		font-size: 30px;
+		position: absolute;
+		padding-left: 180px;
+		padding-top: 280px;
+	}
+
+
+
+	
+
+	#RightBox{
+		background-image: url("Login Page Background.jpg");
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		width: 650px;
+		height: 655px;
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  		
+
+	}
+
+	#RightBoxHeading1{
+		font-family: Raleway;
+		color: white;
+		font:bold;
+		position: absolute;
+		opacity: 1.0;
+		padding-left: 125px;
+		padding-top: 10px;
+		font-size: 40px;
+	}
+
+
+	#RightINBox {
+			background: white;
+			border-radius: 25px;
+    		padding: 20px;
+    		width: 300px;
+    		height: 450px;
+    		position:absolute;
+    		left:130px; 
+    		top:100px;
+    		box-shadow: -20px 20px 15px 5px black;
+		}
+
+
+
+	#Username{
+		font-family: Raleway,sans-serif; 
+		position: relative;
+		top:90px;
+		font-size: 20px;
+
+	}
+
+	#Input1{
+		position: relative;
+		top:40px;
+		width:250px;	
+		padding:12px 20px;
+	}
+
+
+	#Password{
+		font-family: Raleway,sans-serif; 
+		font-size: 20px;
+		position: relative;
+		top:60px;
+	}
+
+	#Input2{
+		position: relative;
+		top:50px;
+		width:250px;	
+		padding:12px 20px;
+	}
+
+	#Check{
+		position: relative;
+		top:60px;
+	}
+
+	#Heading2{
+		position: relative;
+		left:25px;
+		font-size: 20px;
+		top:19px;
+		font-family: Open Sans, sans-serif;
+	}
+
+	#Button
+	{
+		position: relative;
+		top:70px;
+		margin-left: 25px;
+		background-image: url("Login Page Background.jpg");
+		width:250px;
+		font-size: 30px;
+		color: white;
+	}
+
+
+	input[type=text]:focus 
+	{
+    border: 3px solid #555;
+	}
+
+	input[type=password]:focus 
+	{
+    border: 3px solid #555;
+	}
+
+
+	</style>
+
+
+
+<!--	<script type="text/javascript">
+
+  var loginFinished = function(authResult) {
+    if (authResult) {
+      var el = document.getElementById('oauth2-results');
+      var label = '';
+      toggleDiv('oauth2-results');
+      if (authResult['status']['signed_in']) {
+        label = 'User granted access:';
+        gapi.auth.setToken(authResult);
+      } else {
+        label = 'Access denied: ' + authResult['error'];
+      }
+      el.innerHTML =
+          label + '<pre class="prettyprint"><code>' +
+          // JSON.stringify doesn't work in IE8.
+          '{<br />' +
+          '  "id_token" : "' + authResult['id_token'] +'",<br />' +
+          '  "access_token" : "' + authResult['access_token'] + '",<br />' +
+          '  "state" : "' + authResult['state'] + '",<br />' +
+          '  "expires_in" : "' + authResult['expires_in'] + '",<br />' +
+          '  "error" : "' + authResult['error'] + '",<br />' +
+          '  "error_description" : "' + authResult['error_description'] + '",<br />' +
+          '  "authUser" : "' + authResult['authuser'] + '",<br />' +
+          '  "status" : {"' + '<br />' +
+          '    "google_logged_in" : "' + authResult['status']['google_logged_in'] + '",<br />' +
+          '    "method" : "' + authResult['status']['method'] + '",<br />' +
+          '    "signed_in" : "' + authResult['status']['signed_in'] + '"<br />' +
+          '  }<br />' +
+          '}</code></pre>';
+      toggleDiv('signin-button');
+    } else {
+      document.getElementById('oauth2-results').innerHTML =
+          'Empty authResult';
+    }
+  };
+
+  function toggleDiv(id) {
+    var div = document.getElementById(id);
+    if (div.getAttribute('class') == 'hide') {
+      div.setAttribute('class', 'show');
+    } else {
+      div.setAttribute('class', 'hide');
+    }
+  }
+  </script>
+  <script src="https://plus.google.com/js/client:platform.js" type="text/javascript"></script>
+
+
+
+
+!-->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="boxed" id="LeftBox">
+		<h1 id="LeftHeading1"> VITShala </h1>
+		<h2 id="LeftHeading2"> A website to fulfill your needs for notes </h2>
+
+
+		<!--<div id="fbutton" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" ></div>-->
+
+		<!--<div id="g-button" class="g-signin" data-callback="loginFinished"
+    data-approvalprompt="force"
+    data-clientid="807038080671-e755p47dudo5tbe31temnr8r6dt5ttiq.apps.googleusercontent.com"
+    data-requestvisibleactions="http://schema.org/CommentAction"
+    data-cookiepolicy="single_host_origin"
+    >
+  </div>!-->
+
+
+	</div>
+
+
+	<div class="boxed" id="RightBox">
+			<h1 id="RightBoxHeading1">Sign In to VITShala</h1>
+		<div class="boxed" id="RightINBox">
+			<form action="success.php" method="post">
+			<h1  id="Username" >Username</h1>
+
+			<br><br>
+
+			<input id="Input1" type="text" name="Username">
+
+			<h1  id="Password">Password</h1>
+
+			<input id="Input2" type="Password" name="Password">
+			<div>
+				<input type="checkbox" onclick="myFunction()" id="Check">
+				<h2 id="Heading2">Show Password</h2>
+			</div> 
+			<input id="Button" type="submit" value="LOGIN">
+			</form>
+
+		</div>
+	</div>
+
+<script>
+
+function myFunction() {
+    var x = document.getElementById("Input2");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+
+
+<!--<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '497337347428876',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v3.2' // use graph api version 2.8
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call 
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+!-->
+</body> 
+</html>
+
+

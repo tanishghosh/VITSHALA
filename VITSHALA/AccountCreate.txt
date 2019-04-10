@@ -1,0 +1,5 @@
+<!DOCTYPE HTML>
+	<html>
+	<head>
+		<title> Account Created </title>
+		<meta http-equiv="refresh" content="1;url=F:\XAMPP\htdocs\AccountCreate.html">

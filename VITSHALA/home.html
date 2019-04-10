@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body
+ {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Header/Blog Title */
+.header {
+  padding: 130px;
+  text-align: center;
+  background-image: url(copy3.jpg) ;
+background-position: 50%50%;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; 
+  overflow: hidden;
+  background-color: #333;
+  border:none;
+  font-family: Arial;
+  cursor:pointer;
+  height: 47px;
+  font-size: 15px;
+
+
+}
+
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+  border-color: #f2f2f2;
+}
+
+
+.dropdown-content {
+  display: none;
+
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+
+}
+
+.show {
+  display: block;
+  position: absolute;
+
+  margin-top: 50px;
+}
+
+
+
+.topnav input[type=text] {
+  margin-right: 40px;
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+  height: 47px;
+  width: 300px;
+
+}
+
+#searchicon{
+  height:37px;
+  width:38px;
+ 
+  position: absolute;
+  margin-left: 920px;
+  margin-top:5px;
+  margin-right: 3px;
+}
+#Logo{
+  width:400px;
+  height:400px;
+}
+
+#VecSpa{
+  width:930px;
+  height: 200px;
+  margin-top: -20px;
+  margin-left: -30px;
+}
+
+#MAD{
+  width:930px;
+  height: 200px;
+  margin-top: -20px;
+  margin-left: -30px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#">HOME</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">COURSES
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="http://localhost:1234/btech.html">B.Tech</a>
+    <a href="#">MCA</a>
+    <a href="#">BCA</a>
+  </div>
+  </div> 
+  <a href="#">CONTACT US</a>
+  <input type="text"  placeholder="Search..">
+  <img src="Search.png" class="search" id="searchicon" alt="Search contents">
+</div>
+
+<div class="header">
+ <img src= " Logo.png" alt= "VITSHALA" id="Logo" >
+  <h2 style = "font-family:arial; color:red;">A platform to learn , A chance to grow</h2>
+</div>
+ 
+<marquee style = "background-color:tomato;color: black; width = "50%">**Notice:  Latest notes can be downloaded for free** </marquee>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>CREATING WEBPAGES USING HTML AND CSS</h2>
+      <h5> Time for upload: Dec 17, 2018</h5>
+      <p><a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a></p>
+      <p> HTML is the language for describing the structure of Web pages. HTML gives authors the means to:
+ Publish online documents with headings, text, tables, lists, photos, etc. CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. </p>
+      <p>Here is a link that opens up with a website which will help you in creating HTML webpages abd designing it using CSS.</p>
+    </div>
+<div class="card">
+      <h2>VECTOR SPACES</h2>
+      <h5>Uploaded:Dec 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;"><img  id ="VecSpa" src="VectorSpace.png"></div>
+      <p><a href="https://drive.google.com/file/d/1_UWKE4ND0Mx-8ROpIjnT28cwnMqa2nx0/view?usp=sharing" download id="Link2">MAT3002-Vector Spaces</a></p>
+      <p>A vector space (also called a linear space) is a collection of objects called vectors, which may be added together and multiplied ("scaled") by numbers, called scalars. Scalars are often taken to be real numbers, but there are also vector spaces with scalar multiplication by complex numbers, rational numbers, or generally any field.</p>
+    </div>
+<div class="card">
+      <h2>INTRODUCTION TO MOBILE APPLICATIONS</h2>
+      <h5>Uploaded:Dec 19, 2018</h5>
+      <div class="fakeimg" style="height:200px;"><img  id ="MAD" src="IntrotoMAD.png"></div>
+      <p><a href="https://drive.google.com/file/d/1KhS3qI9lHw-BI8HnAtYNxrDFfvtmC13u/view?usp=sharing" download id="Link3">CSE3012-Introduction to Mobile Applications</a></p>
+      <p>Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser.</p>
+    </div>
+<div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Jan 27, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Some description about the updated document.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2016</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Some description about the updated document.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+     
+      <p>In this section , the users profile i.e. his credentials will be seen</p>
+    </div>
+    <div class="card">
+      <h3>Popular Posts</h3>
+      
+      <p><a href="https://drive.google.com/file/d/1HHEe81QuXd_ODqoFj0pXMIOsa8r8Cplk/view?usp=sharing" download id="Link1">PHY1001- Nanotechnology</a></p>
+
+      <p><a href="https://drive.google.com/file/d/1_UWKE4ND0Mx-8ROpIjnT28cwnMqa2nx0/view?usp=sharing" download id="Link2">MAT3002-Vector Spaces</a></p>
+      
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Follow me on facebook, instagram, twitter</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+<p> google adv </p>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>

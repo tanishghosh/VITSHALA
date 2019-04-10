@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Create Account</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Krub:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet"> 
+	<style>
+
+	body{
+		
+	}
+
+	#Box1{
+		background-color: #6200EE;
+		width:1349px;
+		height:500px;
+		position: absolute;
+		left:0;
+		top:0;
+	}
+
+	div.container{
+		width:1000px;
+	}
+
+	#Signup{
+		color: white;
+		position: absolute;
+		padding-left: 600px;
+		font-size: 40px;
+		font-family: Montserrat Alternates, sans-serif;
+	}
+
+	#Box2{
+			background: #d8d8d8;
+			border-radius: 25px;
+    		padding: 20px;
+    		width: 900px;
+    		height: 950px;
+    		position: relative;
+    		left:200px;
+    		top:100px;
+
+	}
+
+	#Header1{
+		font-size:20px;
+		font-family: Krub, sans-serif;
+		position: relative;
+		top:40px;
+	}
+
+
+		#NameTag {
+			font-family: Noto Serif,serif;
+			font-size: 20px;
+			position: relative;
+			top: 60px;
+		}
+
+		#Name
+			{
+				position: relative;
+				top: 60px;
+				width: 500px;
+				padding:9px 20px;
+				border: none;
+			}
+
+		#EmailTag
+			{
+				font-family:Noto Serif,serif;
+				font-size: 20px;
+				position: relative;
+				top: 60px;
+			}
+
+		#Email
+			{
+				position: relative;
+				top: 60px;
+				width: 500px;
+				padding:9px 20px;
+				border: none;
+			}
+
+		#DateTag
+			{
+				font-family: Noto Serif,serif;
+				font-size: 20px;
+				position: relative;
+				top: 60px;
+			}
+
+		#Date
+			{
+				position: relative;
+				top: 60px;
+				width: 500px;
+				height: 30px;
+				border: none;
+				padding:3px 20px;
+			}
+
+		#RoleTag
+			{
+				font-family:Noto Serif,serif;
+				font-size: 20px;
+				position: relative;
+				top: 60px;
+			}
+
+		#Role
+			{
+				position: relative;
+				top: 60px;
+				height: 30px;
+				border: none;
+			}
+
+		#PasswordTag
+			{
+				font-family: Noto Serif,serif;
+				font-size: 20px;
+				position: relative;
+				top: 60px;
+			}
+
+		#Password
+			{
+				position: relative;
+				top: 60px;
+				border: none;
+				padding:9px 20px;
+			}
+
+		#eye1
+			{
+				position: relative;
+				left:200px;
+				font-size: 30px;
+				bottom: 15px;
+				padding:9px 20px;
+
+			}
+
+		#ConfirmPasswordTag
+			{
+				font-family: Noto Serif,serif;
+				font-size: 20px;
+				position: relative;
+				bottom: 35px;
+								
+			}
+
+		#ConfirmPassword
+			{
+				position: relative;
+				bottom: 42px;
+				border: none;
+				padding:9px 20px;
+			}
+
+
+		#eye2
+			{
+				position: relative;
+				left:220px;
+				font-size: 30px;
+				bottom: 112px;
+
+			}	
+
+		#Button1
+			{
+    			position: absolute;
+    			font-family: Noto Serif,serif;
+    			top:900px;
+    			left:400px;
+			}
+
+
+		#Button2
+			{
+               position: absolute;
+               top:750px;
+
+			}
+
+
+		input[type=name]:focus 
+		{
+    		border: 3px solid #555;
+		}
+
+		input[type=password]:focus 
+		{
+    		border: 3px solid #555;
+		}
+
+		input[type=email]:focus 
+		{
+    		border: 3px solid #555;
+		}
+
+
+
+
+
+	</style>
+
+
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+
+<div class="boxed" id="Box1">
+	<h1 id="Signup"> Sign Up</h1>
+
+
+	<div class="boxed" id="Box2">
+
+	<h1 id="Header1">Create a VITShala Account</h1>
+
+	<form action="database.php" method="post">
+		<h1 id="NameTag">Name</h1>
+		<input placeholder="Enter name according to official ID" type="Name" id="Name" name="Name" required>
+
+		<h1 id="EmailTag">Email</h1>
+		<input placeholder="Enter VIT Bhopal email id" type="Email" id="Email" name="Email"  pattern="[a-z0-9._%+-]+@vitbhopal.ac.in$"  required>
+
+		<h1 id="DateTag">Date Of Birth</h1>
+		<input type="Date" id="Date" name="Date" required>
+
+		<h1 id="RoleTag">Role</h1>
+		 <select id="Role" name="Role">
+  			<option value="Student">Student</option>
+  			<option value="Contributor">Contributor</option>
+		 </select> 
+
+		 <h1 id="PasswordTag">Password</h1>
+		 <input  type="password" id="Password" name="Password" required>
+		 <p id="eye1" onclick="myFunction()">&#128065;</p>
+
+		 <h1 id="ConfirmPasswordTag">Confirm Password</h1>
+		 <input type="password" id="ConfirmPassword" required>
+		 <p id="eye2" onclick="myFunction()">&#128065;</p>
+
+		 <a   id="Button2" onclick="myf()"><u>Click to check whether passwords match or not</u></a> 
+
+		 <div class="g-recaptcha" data-sitekey="6LePnHgUAAAAAFDb5gaZQTtaR_IyoXuob2t6OY_s" required></div>
+
+		 <input id="Button1" class="waves-effect waves-light btn" type="submit" value="Create Account">
+
+	</form>  
+	</div>
+</div>
+
+
+<script>
+	function myf()
+	{
+	var pass1 = document.getElementById("Password").value;
+    var pass2 = document.getElementById("ConfirmPassword").value;
+    var ok = true;
+    if(pass1!==null && pass2!==null)
+    {
+    	if (pass1 != pass2) {
+        	alert("Passwords Do not match");
+        	document.getElementById("pass1").style.borderColor = "#E34234";
+        	document.getElementById("pass2").style.borderColor = "#E34234";
+        	ok = false;
+    	}
+    	else {
+        	alert("Passwords Match!!!");
+    	}
+    }
+
+    else if(pass1==null||pass1=="")
+    {
+    	alert("Enter password")
+    }
+
+    else if(pass2==null||pass2=="")
+    {
+    	alert("Enter password again")
+    }
+    return ok;
+   	}
+</script>
+
+<script >
+function myFunction() {
+    var x = document.getElementById("Password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>
+
